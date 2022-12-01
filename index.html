@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPAS APP</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" /><!--Estilos de bootstrap-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"><!--PARA LOS ICONOS-->
+    <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script> <!--Para los iconos-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"><!--Api de google-->
+    <link href="estilo.css" rel="stylesheet" /><!--Mis estilos-->
+</head>
+<body>
+    
+    <div class="jumbotron"><!--Caja donde va el texto el punto de partida el punto de llegada y el boton-->
+        <div class="container-fluid"><!--Titulo-->
+            <h1>
+                DISTANCIA ENTRE DOS PUNTOS
+            </h1>
+            <p>
+                Esta aplicacion te ayudara a calcular la distancia de viaje entre dos puntos
+            </p>
+            <form class="form-horizontal">
+                <!--PUNTO DE PARTIDA -->
+                <div class="form-group"><!--Este div almacena la entrada y las propiedades del punto de partida-->
+                    <label for="from" class="col-xs-2 control-label"><i class="far fa-dot-circle"></i></label><!--Punto-->
+                    <div class="col-xs-4">
+                        <input type="text" id="from" placeholder="Punto de partida" class="form-control"><!--caja de punto de inicio-->
+                    </div>
+               </div>
+                <!--PUNTO DE LLEGADA-->
+               <div class="form-group"><!--Este div almacena la entrada y las propiedades del punto de destino-->
+                    <label for="to" class="col-xs-2 control-label"><i class="fas fa-map-marker-alt"></i></label><!--Marcador-->
+                    <div class="col-xs-4">
+                        <input type="text" id="to" placeholder="Punto de destino" class="form-control"><!--caja de punto de llegada-->
+                    </div> 
+                </div>
+                 
+            </form>
+
+            <div class="col-xs-offset-2 col-xs-10">
+                <button class="btn btn-info btn-lg " onclick="calcRoute();"><i class="fas fa-map-signs"></i></button><!--Boton que me calcula la ruta cunado se da click-->
+            </div>
+        </div>
+        <!--Contenedor del mapa-->
+        <div class="container-fluid">
+            <div id="googleMap"><!--Div que tiene el mapa -->
+            </div>
+            <div id="output"><!--Div que sirve para mostrar la informacion recolectada de la api-->
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Script de java con mis credenciales y contraseñas-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtePyZf4H3XOXfOYMjjcn0n3Kh5wrqdH8&libraries=places"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="/app.js"></script><!--MI Script-->
+</body>
+</html>

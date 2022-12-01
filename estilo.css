@@ -1,0 +1,47 @@
+/*styling.css*/
+/*add font family, background image*/
+
+body {
+    color:olive;/*color de la letra */
+    font-family: 'Times New Roman', Times, serif; /*Tipo de letra*/
+  }
+  
+  .fa-map-marker-alt,
+  .fa-dot-circle {
+    color: olive;
+  }
+  
+
+  .jumbotron {
+    background-color: transparent;/*Color de la caja */
+    margin: 0;/*Margen*/
+    padding: 10px;/*Margen interna */
+  }
+  
+  .jumbotron h1 {
+    letter-spacing: 2.5px;
+    font-size: 3.5em; /*Tamaño de la fuente del titulo*/
+  }
+  
+  .jumbotron h1,
+  .jumbotron p {
+    text-align: center;/*Alinea el texto*/
+  }
+  
+  /*EStilos del mapa*/
+  #googleMap {
+    width: 80%;/*Ancho del mapa*/
+    height: 400px;/*Altura del mapa*/
+    margin: 10px auto;
+  }
+  
+  /*Div que tiene el texto con los datos de la api*/
+  #output {
+    text-align: center; /*Alinea el texto*/
+    font-size: 2em;/*Tamaño de la fuente de datos*/
+    margin: 20px auto; /*Margen del texto con la informacion*/
+  }
+  
+  #mode {
+    color: black;
+  }
